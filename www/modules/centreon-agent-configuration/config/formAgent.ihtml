@@ -1,0 +1,51 @@
+{$form.javascript}
+{$javascript}
+<div id="popin"><p id="msg-wrapper"></p></div>
+<form {$form.attributes}>
+    <table class="formTable table">
+        <tr class="ListHeader" colspan="2">
+          <td class="FormHeader">
+            <h3>| {$form.header.title}</h3>
+          </td>
+        </tr>
+        <tr class="list_lvl_1">
+          <td class="ListColLvl1_name" colspan="2">
+            <h4>{$form.header.information}</h4>
+          </td>
+        </tr>
+        <tr class="list_one"><td class="FormRowField">{$form.poller_id.label}</td><td class="FormRowValue">{$form.poller_id.html}</td></tr>
+        <tr class="list_two"><td class="FormRowField">{$form.token.label}</td><td class="FormRowValue">{$form.token.html}</td></tr>
+        <tr class="list_lvl_1">
+          <td class="ListColLvl1_name" colspan="2">
+            <h4>{$form.header.forward}</h4>
+          </td>
+        </tr>
+        <tr class="list_one"><td class="FormRowField">{$form.use_gateway.label}</td><td class="FormRowValue">{$form.use_gateway.html}</td></tr>
+        <tr class="list_two"><td class="FormRowField">{$form.gateway_ip.label}</td><td class="FormRowValue">{$form.gateway_ip.html}</td></tr>
+        <tr class="list_one"><td class="FormRowField">{$form.use_proxy.label}</td><td class="FormRowValue">{$form.use_proxy.html}</td></tr>
+        <tr class="list_two"><td class="FormRowField">{$form.custom_proxy.label}</td><td class="FormRowValue">{$form.custom_proxy.html}</td></tr>
+        <tr class="list_two"><td class="FormRowField">{$form.insecure_ssl.label}</td><td class="FormRowValue">{$form.insecure_ssl.html}</td></tr>
+        <tr class="list_lvl_1">
+          <td class="ListColLvl1_name" colspan="2">
+            <h4>{$form.header.gateway}</h4>
+          </td>
+        </tr>
+        <tr class="list_one"><td class="FormRowField">{$form.is_gateway.label}</td><td class="FormRowValue">{$form.is_gateway.html}</td></tr>
+        <tr class="list_two"><td class="FormRowField">{$form.listening_port.label}</td><td class="FormRowValue">{$form.listening_port.html}</td></tr>
+        <tr class="list_lvl_1">
+          <td class="ListColLvl1_name" colspan="2">
+            <h4>{$form.header.additional}</h4>
+          </td>
+        </tr>
+        <tr class="list_one"><td class="FormRowField">{$form.activate.label}</td><td class="FormRowValue">{$form.activate.html}</td></tr>
+     </table>
+
+ <div id="validForm">
+ {if $o == "a" || $o == "c"}
+     <p class="oreonbutton">{$form.submitC.html}{$form.submitA.html}&nbsp;&nbsp;&nbsp;{$form.reset.html}</p>
+ {else if $o == "w"}
+     <p class="oreonbutton">{$form.change.html}</p>
+ {/if}
+ </div>
+ {$form.hidden}
+ </form>
