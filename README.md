@@ -1,3 +1,3 @@
-# centreon Anomaly Detection
+# centreon Agent Configuration
 
-Allow the Centreon application to offer the possibility of generating alerts from anomaly detection and to display a chart to understand the alerts generated
+Module to configure the Centreon Agent from Centeron web interface
