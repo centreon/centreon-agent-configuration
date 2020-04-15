@@ -25,6 +25,7 @@ stage('Source') {
     source = readProperties file: 'source.properties'
     env.VERSION = "${source.VERSION}"
     env.RELEASE = "${source.RELEASE}"
+    stash name: 'tar-sources', includes: "centreon-agent-configuration-${env.VERSION}.tar.gz"
     publishHTML([
       allowMissing: false,
       keepAll: true,
@@ -46,6 +47,7 @@ try {
     parallel 'centos7': {
       node {
         sh 'setup_centreon_build.sh'
+        unstash 'tar-sources'
         sh "./centreon-build/jobs/agent-config/${serie}/agent-config-package.sh centos7"
       }
     }
