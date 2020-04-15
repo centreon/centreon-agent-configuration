@@ -60,6 +60,7 @@ try {
     stage('Delivery') {
       node {
         sh 'setup_centreon_build.sh'
+        unstash 'tar-sources'
         sh "./centreon-build/jobs/agent-config/${serie}/agent-config-delivery.sh"
       }
       if ((currentBuild.result ?: 'SUCCESS') != 'SUCCESS') {
