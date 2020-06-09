@@ -21,12 +21,12 @@
 
 $module_conf['centreon-agent-configuration']["rname"] = "Centreon Agent Configration";
 $module_conf['centreon-agent-configuration']["name"] = "centreon-agent-configuration";
-$module_conf['centreon-agent-configuration']["mod_release"] = "20.04.0-rc.3";
+$module_conf['centreon-agent-configuration']["mod_release"] = "20.10.0";
 $module_conf['centreon-agent-configuration']["infos"] = "Allow to configure Centreon Agent";
 $module_conf['centreon-agent-configuration']["is_removeable"] = "1";
 $module_conf['centreon-agent-configuration']["author"] = "Centreon";
 $module_conf['centreon-agent-configuration']["stability"] = "stable";
-$module_conf['centreon-agent-configuration']["last_update"] = "2020-04-17";
+$module_conf['centreon-agent-configuration']["last_update"] = "2020-06-09";
 $module_conf['centreon-agent-configuration']["release_note"] = "TODO";
 $module_conf['centreon-agent-configuration']["images"] = [];
 $module_conf['centreon-agent-configuration']['require_license'] = false;
