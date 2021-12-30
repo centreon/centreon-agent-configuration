@@ -35,7 +35,7 @@ stage('Source') {
       reportTitles: ''
     ])
     if ((env.BUILD == 'RELEASE') || (env.BUILD == 'REFERENCE')) {
-      withSonarQubeEnv('SonarQube') {
+      withSonarQubeEnv('SonarQubeDev') {
         sh "./centreon-build/jobs/agent-config/${serie}/agent-config-analysis.sh"
       }
     }
